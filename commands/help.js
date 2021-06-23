@@ -15,6 +15,7 @@ module.exports = {
             .addField('.mute : rend muet le membre mentionné',true)
             .addField('.kick : expulse le membre mentionné',true)
             .addField('.tempban : banni temporairement un membre',true)
+            .addField('.support : donne le lien du serveur support (non fonctionnel)')
             .setAuthor('Commandes de Luminarity')
             .setFooter('Luminarity')
             .setTimestamp())

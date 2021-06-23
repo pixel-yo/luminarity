@@ -25,6 +25,7 @@ client.on('ready', () => {
     const statuses = [
         () => `${client.guilds.cache.size} serveurs`,
         () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} utilisateurs`
+        () => `type .help`
     ]
     let i = 0
     setInterval(() => {

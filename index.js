@@ -5,8 +5,9 @@ const Discord = require('discord.js'),
     config = require('./config.json'),
     fs = require('fs')
  
-client.login(process.env.TOKEN)
+client.login(config.token)
 client.commands = new Discord.Collection()
+client.db = require('./db.json')
 
 fs.readdir('./commands', (err, files) => {
     if (err) throw err
@@ -24,7 +25,7 @@ client.once('ready', () => {
 client.on('ready', () => {
     const statuses = [
         () => `${client.guilds.cache.size} serveurs`,
-        () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} utilisateurs`
+        () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} utilisateurs`,
         () => `type .help`
     ]
     let i = 0

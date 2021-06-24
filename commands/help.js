@@ -15,6 +15,8 @@ module.exports = {
             .addField('.mute : rend muet le membre mentionné',true)
             .addField('.kick : expulse le membre mentionné',true)
             .addField('.tempban : banni temporairement un membre',true)
+            .addField('.clear : supprime le nombre de messages demandé',true)
+            .addField('.tempmute : rend muet temporairement le membre mentionné',true)
             .setAuthor('Commandes de Luminarity')
             .setFooter('Luminarity')
             .setTimestamp())

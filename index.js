@@ -7,7 +7,7 @@ const Discord = require('discord.js'),
  
 client.login(process.env.TOKEN)
 client.commands = new Discord.Collection()
- 
+
 fs.readdir('./commands', (err, files) => {
     if (err) throw err
     files.forEach(file => {
@@ -25,6 +25,7 @@ client.on('ready', () => {
     const statuses = [
         () => `${client.guilds.cache.size} serveurs`,
         () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} utilisateurs`
+        () => `type .help`
     ]
     let i = 0
     setInterval(() => {

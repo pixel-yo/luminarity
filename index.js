@@ -5,7 +5,7 @@ const Discord = require('discord.js'),
     config = require('./config.json'),
     fs = require('fs')
  
-client.login(env.process.TOKEN)
+client.login(process.env.TOKEN)
 client.commands = new Discord.Collection()
 client.db = require('./db.json')
 
